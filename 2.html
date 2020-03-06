@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+	<input id="textField" type='text' onSubmit='changeColorAndAddInput()' />
+	<input type='button' value='Submit form' onClick='submitTextField()' />
+
+	<script>
+		function submitTextField() {
+			$("#textField").submit();
+		}
+		function changeColorAndAddInput() {
+			var back = ["blue","gray","green","red"];
+			var rand = back[Math.floor(Math.random() * back.length)];
+			$('input[type="text"]').css('background',rand);
+
+			input = jQuery('<input>');
+			jQuery('body').append(input);
+		}
+	</script>
+</body>
+</html>

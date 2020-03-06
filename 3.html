@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+	<img id="img1" src="D:\User\Вебка\lab3\search.jpg" hidden>
+	<img id="img2" src="D:\User\Вебка\lab3\online-help.png" hidden>
+	<button id="showHide">Show-Hide</button>
+	<script>
+		$('#showHide').click(function () {
+            var flag = true;
+            setInterval(function () {
+                  if(flag){
+                      $('#img1').hide();
+                      $('#img2').show();
+                    } else {
+                      $('#img1').show();
+                      $('#img2').hide();
+                    }
+                    flag = !flag;
+            }, 3000);
+    });
+		
+	</script>
+</body>
+</html>

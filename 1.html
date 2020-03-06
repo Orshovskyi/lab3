@@ -1,0 +1,18 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+	<img src="D:\User\Вебка\lab3\search.jpg">
+	<img src="D:\User\Вебка\lab3\online-help.png">
+	<script>
+		$(window).resize(function() {
+			$.each($('img'), function(){
+				$(this).replaceWith('<p>Текст</p>');
+			});
+		});
+	</script>
+</body>
+</html>
